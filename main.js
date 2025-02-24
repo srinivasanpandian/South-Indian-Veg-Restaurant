@@ -170,3 +170,20 @@ jQuery(window).on('load', function () {
 
     }
 });
+
+let lastScrollTop = 0;
+const header = document.querySelector(".site-header");
+
+window.addEventListener("scroll", function () {
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop && scrollTop > 50) {
+        // Scrolling down, hide header completely
+        header.classList.add("hidden");
+    } else {
+        // Scrolling up, show header
+        header.classList.remove("hidden");
+    }
+
+    lastScrollTop = scrollTop;
+});
