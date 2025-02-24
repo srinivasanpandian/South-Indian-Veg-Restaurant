@@ -496,7 +496,7 @@ ul {
 }
 
 .main-banner {
-    padding: 200px 0 300px;
+    padding: 200px 0 30px;
     min-height: 100vh;
     position: relative;
 }
@@ -664,7 +664,7 @@ p {
 
 .section {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 20px;
     position: relative;
 }
 
@@ -1428,8 +1428,11 @@ p {
 }
 
 .footer-logo {
+    width: 100px;  /* Example width */
+    height: 200px;  /* Example height */
     margin-bottom: 30px;
 }
+
 
 .footer-info .social-icon {
     margin-top: 20px;
