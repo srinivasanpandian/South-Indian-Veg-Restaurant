@@ -187,3 +187,21 @@ window.addEventListener("scroll", function () {
 
     lastScrollTop = scrollTop;
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".food-nav-menu a");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default jump
+            const targetId = this.getAttribute("href").substring(1); // Get ID without #
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop - 80, // Adjust 80px for header height
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+});
